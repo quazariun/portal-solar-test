@@ -34,19 +34,26 @@ You can use [ASDF](https://github.com/asdf-vm/asdf "Management of Language Versi
 
 <br>
 
-#### Then install Bundler:
+#### Then run Bundler:
+
+```bash
+bundle install
+```
+
+If any errors happened or you haven't Bundler, install bundler manually:
 
 ```bash
 gem install bundler
 ```
 Bundler is a Gem Controller, for more information visit:  [https://bundler.io/].
 
-When the installation is complete, run the follow comand:
+<br>
+
+#### Install Front-End dependencies using Yarn, run this command on your terminal:
 
 ```bash
-bundle install
+yarn install
 ```
-
 <br>
 
 ## How to configure Database?
@@ -76,7 +83,42 @@ Enter password for new role: portalsolar
 ```
 *This user is only for development in your machine
 
+You need to export the password on the **Environment** of your System, use the follow command to do that:
+```bash
+export PORTALSOLARDEVTEST_DATABASE_PASSWORD=portalsolar
+```
 
+Then create the Database, running the follow command:
+```bash
+bundle exec rails db:create db:migrate db:seed
+```
+
+
+*This Database is populated with Sample images and informations
+
+
+## How to run the Project?
+---
+
+To run, use rails:
+```ruby
+rails server
+```
+
+You'll receive a message, showing where is the port that the server is running:
+
+```
+=> Booting Puma
+=> Rails 5.2.3 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.1 (ruby 2.6.3-p62), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://localhost:3000
+```
+
+In this case is on **localhost:3000**
 
 ### Requisitos 
 
