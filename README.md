@@ -23,6 +23,60 @@ Leia com atenção pois a compreensão faz parte do processo, faça o máximo qu
 
 Good Luck!
 
+## How to configure the Project?
+---
+
+#### The first thing is to install Ruby:
+
+- Ruby version `2.6.3`
+
+You can use [ASDF](https://github.com/asdf-vm/asdf "Management of Language Versions"), [RVM](https://rvm.io/) or [RBVN](https://github.com/rbenv/rbenv), all of these are made to control Language Versions.
+
+<br>
+
+#### Then install Bundler:
+
+```bash
+gem install bundler
+```
+Bundler is a Gem Controller, for more information visit:  [https://bundler.io/].
+
+When the installation is complete, run the follow comand:
+
+```bash
+bundle install
+```
+
+<br>
+
+## How to configure Database?
+---
+
+You'll need to install and configure postgres in your machine, in the official site there is a [Getting Started Guide](https://www.postgresql.org/docs/current/tutorial.html).
+
+After your installation of postgres, we'll create a **Postgres User** for this project.
+
+<br>
+
+> **USERNAME:**  PortalSolarDevTest
+
+> **PASSWORD:**  portalsolar
+ 
+<br>
+
+#### To do that, run this command on your terminal:
+
+```bash
+sudo -u postgres createuser --login --pwprompt --superuser  PortalSolarDevTest
+```
+and write the **Password** in the prompt that will show:
+
+```
+Enter password for new role: portalsolar 
+```
+*This user is only for development in your machine
+
+
 
 ### Requisitos 
 

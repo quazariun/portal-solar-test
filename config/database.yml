@@ -5,6 +5,8 @@ default: &default
 development:
   <<: *default
   database: PortalSolarDevTest_development
+  username: PortalSolarDevTest
+  password: <%= ENV['PORTALSOLARDEVTEST_DATABASE_PASSWORD'] %>
 production:
   <<: *default
   database: PortalSolarDevTest_production
