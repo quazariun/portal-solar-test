@@ -1,4 +1,4 @@
-# Portal Solar - Dev Test
+# Portal Solar - Dev Test (Eduardo H.P. Souza)
 
 ## Teste para vagas de Desenvolvimento
 
