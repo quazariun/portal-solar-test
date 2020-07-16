@@ -9,7 +9,9 @@ class PowerGeneratorsController < ApplicationController
   def show
     @power_generators = Array(PowerGenerator.find(params[:id]))
 
-    render 'power_generators/index'
+    respond_to do |format|
+      format.html
+    end
   end
 
   def autocomplete
