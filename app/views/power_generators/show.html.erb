@@ -36,7 +36,10 @@
     </div>
 
     <div class="product-freight">
-      
+      <h2>CEP:</h2>
+      <input type="text" name="cep" data-zipcode>
+      <%= button_tag 'Enviar', onclick: "FreightCost(#{@power_generators.first.id})"%>
+      <p>Preço da entrega: <span data-freight></span></p>
     </div>
   </div>
 
