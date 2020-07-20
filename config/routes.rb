@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get :autocomplete, controller: :power_generators
   get :search, controller: :power_generators
-  get '/freight/:state',action: :freight, controller: :power_generators
+  get '/freight/:state', action: :freight, controller: :power_generators
 end

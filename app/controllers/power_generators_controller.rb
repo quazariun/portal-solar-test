@@ -1,4 +1,5 @@
 class PowerGeneratorsController < ApplicationController
+  include ActionView::Helpers::NumberHelper
   before_action :force_json, only: :autocomplete
 
   def index
@@ -17,12 +18,13 @@ class PowerGeneratorsController < ApplicationController
   def freight 
     state = params[:state]
     power_generator = PowerGenerator.find(params[:power_generatorID])
-    freigths = Freight
-      .where(state: state)
+    
+    freigths = Freight.where(state: state)
+    
     respond_to do |format|
       format.json do
         render json: {
-          cost: number_to_currency(freigths.pluck(:cost).min, unit: "R$ ", separator: ",", delimiter: ".")
+          cost: number_to_currency((freigths.pluck(:cost).min), unit: "R$ ", separator: ",", delimiter: "")
         }
       end
     end
