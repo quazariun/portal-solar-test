@@ -1,20 +1,13 @@
 async function FreightCost(power_generatorID) {
-
   var cepInput = document.querySelector('input[data-zipcode]');
+  var freightOutput = document.querySelector('span[data-freight]');
 
   var cep = cepInput.value;
-  let request = new XMLHttpRequest();
   var url = 'https://viacep.com.br/ws/' + cep + '/json/'
-  request.open('GET', url);
-  request.responseType = 'json';
-  request.send();
-
-  request.onload = function () {
-    $state = request.response;
-  }
   
-  let uf = $state.uf
+  let state = await fetch(url).then(response => response.json()).then(data => {return data.uf;});
 
-  const freightResponse = await fetch(`/freight/${uf}?power_generatorID=${power_generatorID}`);
+  let freightCost = await fetch(`/freight/${state}?power_generatorID=${power_generatorID}`).then(response => response.json()).then(data => {return data.cost});
 
+  freightOutput.textContent = await freightCost;
 }
