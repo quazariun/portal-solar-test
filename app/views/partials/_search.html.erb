@@ -1,0 +1,21 @@
+  <div class="searcher gradient">
+    <div class="searcher__radio">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="searchRadio" id="simpleSearch" value="simple" checked>
+        <label class="form-check-label" for="simpleSearch">Pesquisa simples</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="searchRadio" id="advancedSearch" value="advanced">
+        <label class="form-check-label" for="advancedSearch">Pesquisa Avançada</label>
+      </div>
+    </div>
+
+    <%= form_with url: search_path, local: true, method: :get, html: { class: "simple-form"} do |form| %>
+     <%= form.submit "Pesquisar", class: "simple-form__btn btn btn-outline-primary btn-lg" %>
+      <%= form.text_field :q, placeholder: "O que procura?", data: {behavior: "autocomplete"}, class: "simple-form__input form-control form-control-lg" %>
+    <% end %>
+
+      <div class="advanced-form" style="display:none;">
+        Entradas do usuário para pesquisar uma coleção de geradores de energia com base nas recomendações fornecidas e melhor custo de frete.
+      </div>
+  </div>
