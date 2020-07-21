@@ -1,5 +1,5 @@
 document.addEventListener("turbolinks:load", function() {
-  $input = $("*[data-behavior='autocomplete']")
+  $input = $("input[data-behavior='autocomplete']")
 
   var options = {
     getValue: "name",
@@ -18,8 +18,8 @@ document.addEventListener("turbolinks:load", function() {
         Turbolinks.visit(url)
       }
     }
-
   }
 
-  $input.easyAutocomplete(options)
+  console.log(options);
+
 });
