@@ -1,0 +1,48 @@
+p.power_generator-card__price {
+  margin: -4px 0 8px 0;
+  font-style: bold;
+  font-size: 28px;
+  text-align: center;
+  color: red;
+}
+
+.power_generators-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.power_generator-card {
+  height: 200px;
+  width: 720px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+}
+
+.power_generator-card__img {
+  width: 220px;
+  height: 220px;
+  border-radius: 0.25em;
+}
+
+.power_generator-card__body {
+  margin-left: 26px;
+  margin-right: 130px;
+}
+
+.power_generator-card__button {
+  color: #e96443;
+}
+
+.power_generator-card__description {
+  text-align: justify;
+}
+
+.power_generator-card__title {
+  margin-bottom: 10px;
+  font-style: bold;
+  font-size: 24px;
+  text-align: center;
+  color: rgb(28, 26, 65);
+}

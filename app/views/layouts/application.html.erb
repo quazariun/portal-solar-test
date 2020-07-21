@@ -5,23 +5,11 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.png' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <!-- JS file -->
-    <script src="app/assets/stylesheets/easy-autocomplete.css"></script>
-
-    <!-- CSS file -->
-    <link rel="stylesheet" href="app/assets/stylesheets/easy-autocomplete.min.css">
-
-    <!-- Additional CSS Themes file - not required-->
-    <link rel="stylesheet" href="app/assets/stylesheets/easy-autocomplete.themes.min.css">
-
-    <!-- Using jQuery with a CDN -->
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
   <body>
+    <%= render "partials/navbar"%>
     <%= yield %>
   </body>
 </html>

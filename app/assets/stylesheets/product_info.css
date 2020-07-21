@@ -1,0 +1,20 @@
+.product-modal {
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+  color: black;
+}
+
+.product-info {
+  align-items: right;
+}
+
+.product-image {
+  float: left;
+  height: 40%;
+}
+
+.product-price {
+  align-content: right;
+}
