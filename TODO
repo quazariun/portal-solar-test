@@ -45,5 +45,6 @@ Dicas marotas:
 Extras:
   - Corrigir Seeds quebradas @done
       - Achar uma alternativa para o Seed_Migration @high 
-  - Extrair NavBar para um Layout @low
-  - Extrair o CSS para cada página @low
+  - Extrair NavBar para um Layout @low @done
+  - Extrair o CSS para cada página @low @done
+  - Criar um filtro lateral para buscas específicas <--- busca avançada @high
