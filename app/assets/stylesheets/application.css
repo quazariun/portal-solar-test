@@ -14,10 +14,12 @@
  *= require_self
  *= require navbar
  *= require power_generator
+ *= require sidebar
  *= require product_info
  */
 
 body {
+  overflow-x: hidden;
   width: 100%;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
@@ -25,6 +27,7 @@ body {
 }
 
 .container {
+  margin-top: 165px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
